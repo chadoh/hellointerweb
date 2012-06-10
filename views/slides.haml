@@ -11,11 +11,11 @@
 
     %link(href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css')
 
-    %link(rel='stylesheet' href='css/reset.css')
-    %link(rel='stylesheet' href='css/main.css')
-    %link(rel='stylesheet' href='css/print.css' type='text/css' media='print')
+    %link(rel='stylesheet' href='/css/reset.css')
+    %link(rel='stylesheet' href='/css/main.css')
+    %link(rel='stylesheet' href='/css/print.css' type='text/css' media='print')
 
-    %link(rel='stylesheet' href='lib/zenburn.css')
+    %link(rel='stylesheet' href='/lib/zenburn.css')
 
     %title= @title
 
@@ -35,11 +35,10 @@
       .progress
         %span
 
-    %script(src='lib/highlight.js')
-    %script(src='lib/classList.js')
-    %script(src='js/reveal.js')
+    %script(src='/lib/highlight.js')
+    %script(src='/lib/classList.js')
+    %script(src='/js/reveal.js')
     :javascript
-
       // Parse the query string into a key/value object
       var query = {};
       location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
