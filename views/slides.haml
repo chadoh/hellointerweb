@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    - if @description
+      %meta(name="description" content=@description)
+    - if @keywords
+      %meta(name="keywords" content=@keywords)
+    %meta(name='apple-mobile-web-app-capable' content='yes')
+    %meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+
+    %link(href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css')
+
+    %link(rel='stylesheet' href='css/reset.css')
+    %link(rel='stylesheet' href='css/main.css')
+    %link(rel='stylesheet' href='css/print.css' type='text/css' media='print')
+
+    %link(rel='stylesheet' href='lib/zenburn.css')
+
+    %title= @title
+
+    = haml :analytics, :layout => false
+  %body
+    .reveal
+      .state-background
+      .slides
+        ~ @page.to_html(self)
+
+      %aside.controls
+        %a.left(href='#') &#x25C4;
+        %a.right(href='#') &#x25BA;
+        %a.up(href='#') &#x25B2;
+        %a.down(href='#') &#x25BC;
+
+      .progress
+        %span
+
+    %script(src='lib/highlight.js')
+    %script(src='lib/classList.js')
+    %script(src='js/reveal.js')
+    :javascript
+
+      // Parse the query string into a key/value object
+      var query = {};
+      location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+        query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+      } );
+
+      // Fires when a slide with data-state=customevent is activated
+      Reveal.addEventListener( 'customevent', function() {
+        alert( '"customevent" has fired' );
+      } );
+
+      // Fires each time a new slide is activated
+      Reveal.addEventListener( 'slidechanged', function( event ) {
+        // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+      } );
+
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // If true; each slide will be pushed to the browser history
+        history: true,
+
+        // Loops the presentation, defaults to false
+        loop: false,
+
+        // Flags if mouse wheel navigation should be enabled
+        mouseWheel: true,
+
+        // Apply a 3D roll to links on hover
+        rollingLinks: true,
+
+        // UI style
+        theme: query.theme || 'default', // default/neon
+
+        // Transition style
+        transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+      });
+
