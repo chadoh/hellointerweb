@@ -1,11 +1,33 @@
 Layout: slides
 
 %section
-  %h1 Week 1
-  %h3
-    In which we meet a heroic browser,
-    a thoughtful server, and a large &amp;
-    mysterious stack of documents
+  %section
+    %h1 Week 1
+    %h3
+      In which we meet a heroic browser,
+      a thoughtful server, and a large &amp;
+      mysterious stack of documents
+  %section
+    %h2 Summary
+    %p
+      You may star as the main character in this one-act play, but you’ll
+      certainly get to help build a Rube Goldberg machine!
+
+  %section
+    %h2 Topics
+    %p
+      browser, DNS, servers, how markup becomes a webpage, &amp;
+      webkit's inspector
+
+  %section
+    %h2 Caution! Unfinished Class!
+    :markdown
+      Some things need to be finished up before this class can be taught!
+
+      * The Tree Octopus website seems to be offline. Need to get the
+        fork of it online in it's place.
+      * The Rube Goldberg machine needs to be massively scaled back. It's
+        currently way too easy to lose the forest through the trees.
 
 %section
   %section
@@ -39,10 +61,14 @@ Layout: slides
     %img(src='http://c758482.r82.cf2.rackcdn.com/sublime_text_icon_2181.png' alt='Sublime Text 2')
 
 %section
-  %h2 Check it out!
-  %a(href='http://zapatopi.net/treeoctopus/' data-popup)
-    %img(src='http://zapatopi.net/treeoctopus/title_text.png'
-         alt='Hely Save The ENDANGERED Pacific Northwest Tree Octopus from EXTINCTION!')
+  %section
+    %h2 Check it out!
+    %a(href='http://zapatopi.net/treeoctopus/')
+      %img(src='http://zapatopi.net/treeoctopus/title_text.png'
+           alt='Hely Save The ENDANGERED Pacific Northwest Tree Octopus from EXTINCTION!')
+  %section
+    %h2 You're going to make your own site like this.
+    %p But with an animal that you make up.
 
 %section
   %section
@@ -60,7 +86,96 @@ Layout: slides
       * Browser (our hero; a talented artist who needs good instructions)
       * Browser's friend (has good ideas for Browser)
       * Computer (Browser's landlord)
-      * Router (A lazy grouch! Computer's secretary.)
+      * Router (A lazy grouch! Computer's secretary)
       * Name Server 1 (claims to know some things)
-      * Name Server 2 (Knows Server's digits)
+      * Name Server 2 (knows Server's digits)
       * Server (has art instructions for Browser)
+
+%section
+  %section
+    %h2 A Machine
+    :markdown
+      What mysterious contraption did Friend request? Let's build
+      it and find out!
+
+      <small>(Here are [all the documents][mchn].)</small>
+
+        [mchn]: https://docs.google.com/folder/d/0B1jBQUSu-ixMMTU0ZDljMDctMTMxZS00OWEzLTgyY2ItM2ZkYjNmNTViYmJj/edit
+
+  %section
+    %h2 Summary
+    %h3 HTML
+    %p
+      Speficies the architectural elements needed (a frame,
+      fabric, etc)
+    %h3 CSS
+    %p
+      Says how to arrange the HTML (how big to cut the fabric,
+      how to attach it to the frame, etc)
+    %h3 JavaScript
+    %p
+      Says how the page behaves ("when a user clicks this, do
+      such-and-such")
+
+%section
+  %section
+    %h2 Enough Metaphor; Some Real HTML
+    %a(href='http://www.htmldog.com/guides/htmlbeginner/')
+      %img(src="http://www.htmldog.com/badge1.gif" alt="HTML and CSS tutorials, references, and articles")
+  %section
+    %h2 Text Editor What What?
+    :markdown
+      Sublime Text 2, that you downloaded at the beginning, is your
+      **text editor**.  When HTMLdog says stuff about Notepad,
+      just use Sublime instead.
+
+      <small>It's **soooo much better** than Notepad!</small>
+
+  %section
+    %h2 Oh, &amp; yes, Sublime costs money
+    :markdown
+      That is, it will prompt for you to buy a full copy every 10
+      saves or so. It's kind of expensive, and there are free
+      alternatives (they're just usually not as pretty), so you
+      need not feel bad for taking it for a long test drive.
+      You should probably try some of the free alternatives before
+      you spring to buy it.
+
+%section
+  %section
+    %h2 Rumaging through someone else's HTML
+    :markdown
+      In Chrome (you are using Chrome for this presentation, aren't you?)
+      right-click this paragraph and select "Inspect Element" from
+      the context menu.
+
+  %section
+    %h2 The text is in a &lt;p&gt; tag!
+    :markdown
+      You'll learn what that means as you go through HTMLdog. You can do
+      this on any website. You can even right-click elements in the
+      Inspector and _edit_ them! Try it now! Make the previous heading say
+      "Rumaging through someone else's _markup_" or something. Don't
+      worry, you won't mess up the site.  Just refresh the page &amp; it
+      will be as good as new.  Can you figure out why? (Think about the
+      play we did.)
+
+%section
+  %h2 Things to play with before next week
+  :markdown
+    * Come up with your own made-up creature! Come up with some fun
+      details. (Where does it live? How do you catch one?  Can it be
+      domesticated? What's it's favorite food? What do you call a group of
+      them?) If you're so inclined, you could even draw a picture of it &
+      save it to your computer!
+    * Finish the [HTML Beginner][dogh] & [CSS
+      Beginner][dogc] tutorials on [HTMLdog][dog]. You can keep going to
+      the intermediate & expert ones, too, if you want!
+    * Download [Git][git] and a [Git GUI][gitx] (GitX is a nice one).
+      (Don't worry about understanding this yet!)
+
+      [dog]:  http://htmldog.com/
+      [dogh]: http://htmldog.com/guides/htmlbeginner/
+      [dogc]: http://htmldog.com/guides/cssbeginner/
+      [git]:  http://git-scm.com/
+      [gitx]: http://git-scm.com/downloads/guis
