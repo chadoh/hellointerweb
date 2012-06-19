@@ -944,6 +944,7 @@ body {
 	background: rgba( 0, 0, 0, 0.6 );
 }
 
-
-
+.something-hidden {
+  background: url(http://f.cl.ly/items/0F3X3G0u400441131d2m/rana.png) bottom left no-repeat
+}
 
