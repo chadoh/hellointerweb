@@ -3,8 +3,6 @@
 
 // Variables
 
-$content-width: 37em
-
 $border-style: 1px dashed $border-color
 
 // Reset
@@ -91,30 +89,28 @@ nav.breadcrumb
 article, aside, footer, header, nav, section
   display: block
 
-div#container
-  width: 54em
+#container
+  width: 80%
   margin: 0 auto
-  padding: 1em 1em 0 1em
 
-  div#content
-    position: relative
-    width: $content-width
-    float: left
-    padding: 1px 0
+#content
+  width: 60%
+  float: left
+  padding: 1px 0
 
-  div#sidebar
-    width: 12em
-    margin-left: 40em
-    padding: 0 1em
-  
-  footer.branding
-    clear: both
-    color: $meta-color
-    @include adjust-font-size($base-scale)
-    p
-      width: $content-width
-      margin: 0
-      padding: 1em 0
+#sidebar
+  width: 35%
+  float: left
+  padding-left: 5%
+
+.branding
+  clear: both
+  color: $meta-color
+  @include adjust-font-size($base-scale)
+  p
+    width: 80%
+    margin: 0
+    padding: 1em 0
 
 // The visuals
 
@@ -133,7 +129,7 @@ a
     color: $active-link-color
     border-bottom-color: $active-link-color
 
-nav.breadcrumb    
+.breadcrumb
   ul
     margin: 0
   li
@@ -206,15 +202,14 @@ article[role="main"]
       max-width: none
     ul#dsq-comments
       margin-left: 0
-  
+
 // Pages/articles assigned to this page
-section.pages,
-section.articles
+.pages,
+.articles
   & > ol
     margin-left: 0
     li
       position: relative
-      list-style: none
     article
       ol li
         list-style: decimal
@@ -235,7 +230,7 @@ section.articles
     footer
       border-top: none
 
-nav.categories
+.categories
   h1
     @include adjust-font-size(1, 2, 0)
 
@@ -247,5 +242,22 @@ nav.categories
     & > ul
       @include adjust-font-size(0.909, 0, 0)
 
-div.feed
+.feed
   margin: $base-vertical-margin 0
+
+.check-it-out:after
+  content: ' over there \2192'
+
+@media only screen and (max-width: 850px)
+  #container
+    width: 98%
+
+@media only screen and (max-width: 685px)
+  .check-it-out:after
+    content: ':'
+  #content, #sidebar
+    float: none
+    width: 99%
+    margin: 0 auto
+    padding: 0
+
