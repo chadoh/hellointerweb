@@ -20,10 +20,12 @@ Link text: Week 2: Let's fill the web with lies! Your first website (is just a b
 
 %section.something-hidden
   %h2 Try Ruby!
-  %a(href='http://tryruby.org')
-    %img(src='http://mislav.uniqpath.com/poignant-guide/images/about.the.poignant.guide-1.gif'
-    alt='tryruby.org')
   :markdown
+    [![tryruby.org][poignant]][tryruby]
+
+      [poignant]: http://mislav.uniqpath.com/poignant-guide/images/about.the.poignant.guide-1.gif
+      [tryruby]: http://tryruby.org
+
     <small>(That's a link!)</small>
 
     We'll be using this more in class 4, but there are good concepts that will
@@ -62,9 +64,8 @@ Link text: Week 2: Let's fill the web with lies! Your first website (is just a b
   %section
     %h2 Like typing commands on tryruby.org
     :markdown
-      Except instead of executing Ruby code, you'll be executing _shell script_.
-
-      I know that sounds crazy but don't worry!
+      Except instead of Ruby code, you'll be executing _shell script_.  I know
+      that sounds crazy but don't worry!
 
       <small>This is how computers used to work, before Apple popularized
       [graphics][gui].</small>
@@ -74,7 +75,7 @@ Link text: Week 2: Let's fill the web with lies! Your first website (is just a b
       Just type each of these lines (don't copy & paste; you'll learn better!),
       hitting "enter" after each:
 
-          $ cd Code/tree-octopus # Make this the folder that you saved your project to!
+          $ cd <the folder with your website>
           $ git init
           $ git add .
           $ git commit -m "First commit"
@@ -84,7 +85,7 @@ Link text: Week 2: Let's fill the web with lies! Your first website (is just a b
   :markdown
     Hold your Alt key (Command key on a mac) and press Tab to switch back to
     Sublime. We'll come back to that git/shell/committing stuff and make sense
-    of it in a little bit.
+    of it later.
 
     For now, let's start customizing your CSS.
 
@@ -92,3 +93,72 @@ Link text: Week 2: Let's fill the web with lies! Your first website (is just a b
     use on your website!</small>
 
       [font]: http://www.google.com/webfonts
+
+%section
+  %section
+    %h2 Commit Yr Changes!
+    :markdown
+      I know, I know, you've much more you want to do. CSS takes forever. But
+      let's commit your changes now. Hold Alt (Command on a Mac) and hit Tab
+      to get back to Terminal/Git-Bash. Then do this:
+
+          $ git add .
+          $ git commit -m "Workin' on CSS, w00t w00t"
+
+  %section
+    %h2 What the git?
+    :markdown
+      Open up the [Git GUI][gitx] that you downloaded. It'll ask you to open a
+      folder. Open the folder that your website is in.
+
+      [![Try Git][badge]][try-git]
+
+      _Preeeeeetty sweeeet_, right? You never need to worry about screwing
+      anything up! Just _commit often_.
+
+        [gitx]: http://git-scm.com/downloads/guis
+        [badge]: assets/images/try-git.png
+        [try-git]: http://www.codeschool.com/courses/try-git
+
+      <small>Git does **waaaay** more than that. Be excited! We'll learn more in
+      week 4.</small>
+
+  %section
+    %h2 But what about this "shell" stuff?
+    :markdown
+      Great question. Just for you, I've put together [a non-nerd's guide to the command line][shell].
+
+      Go through it at your leisure!
+
+        [shell]: /a-non-nerds-guide-to-the-command-line
+
+%section
+  %section
+    %h2 Things to play with before next week
+    :markdown
+      * Trick out your index page. Make the CSS zippy. Make the HTML funny. Have
+        fun! (Be done when it isn't fun anymore.)
+      * Go through [a non-nerd's guid to the command line][shell] so all that
+        command-line voodoo seems less magical & terrifying
+      * Continue with [tryruby.org][ruby] if you feel like it (we'll be using it more starting Week 4)
+
+        [ruby]: http://tryruby.org
+        [shell]: /a-non-nerds-guide-to-the-command-line
+
+  %section
+    %h2 Blogs to follow
+    :markdown
+      There are SO MANY blogs that talk about good HTML & CSS practices. Here are a couple:
+
+      * [A List Apart][list]
+      * [CSS Tricks][trck]
+
+      There are also a lot of websites to just inspire your own HTML & CSS designs:
+
+      * [web creme][crem]
+      * [CSS Zen Garden][zen]
+
+        [list]: http://www.alistapart.com/
+        [trck]: http://css-tricks.com/
+        [crem]: http://webcreme.com/
+        [zen]:  http://www.csszengarden.com/
