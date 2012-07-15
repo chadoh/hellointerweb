@@ -1,18 +1,25 @@
 Layout: slides
 
 %section
-  %h1 A Non-Nerd's Guide To The Command Line
-  %img(src="http://blog.marc-seeger.de/assets/2009/12/30/terminal.png" alt="")
-
-%section
   %section
-    %h2 A Rich Heritage
+    %h3 A Non-Nerd's Guide To
+    %h1 The Command Line
+    %img(src='http://blog.marc-seeger.de/assets/2009/12/30/terminal.png'
+         alt='' class='no-border')
     :markdown
-      [Unix][unix] was invented in 1969. It's still one of the most-used
-      operating systems in the world (all of Google's servers use it, for
-      example). Mac OSX and Linux are based on it. When you use the command
-      line, you're using your computer the way people used computers decades
-      before colorful screens and the mouse were in use.
+
+      To jump right in and start using it, go that way. &rarr;
+
+      &darr; Or go this way to get some context.
+
+  %section
+    %h2 1969
+    :markdown
+      The year [Unix][unix] was invented. It's still one of the most-used
+      operating systems in the world (just think: all of Google's servers use
+      it).  Mac OSX and Linux are based on it. When you use the command line,
+      you're using your computer the way people used computers decades before
+      colorful screens and the mouse were in use.
 
         [unix]: https://en.wikipedia.org/wiki/Unix
 
@@ -30,32 +37,34 @@ Layout: slides
         [bash]: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
         [zsh]: https://friedcpu.wordpress.com/2007/07/24/zsh-the-last-shell-youll-ever-need/
 
-%section
-  %h2 So what?
-  :markdown
-    So why do people still use it?
+  %section
+    %h2 So what?
+    :markdown
+      So why do people still use it?
 
-    Because it's _easy_.
+      Because it's _easy_.
 
-    That is, it's hard to write programs that use graphics. Writing programs
-    that run in a shell, though, is easy as escargot.
+      That is, it's hard to write programs that use graphics. Writing programs
+      that run in a shell, though, is easy as escargot. So, there are all kinds
+      of things that you can only do using shell.
 
-    Getting started in it is a bit strange, admittedly, but it opens up whole
-    new worlds (it _is_ a whole new world, let's admit it), and you can dip
-    your toes in as slowly as you want.
+      Getting started in it is a bit strange, admittedly, but it opens up whole
+      new worlds (it _is_ a whole new world). Don't get overwhelmed, just take
+      it slow. Any familiarity will be great, so if it starts feeling
+      overwhelming, just stop for the day.
 
 %section
   %section
-    %h2 So what is it?
+    %h2 Ingredients
+    %h3 On a Mac
     :markdown
-      Open up Terminal (git-bash in windows) and also open up a file browser
-      (Finder on a Mac, File Explorer on Windows). Find your "home" folder
-      (the one that has your name on a Mac, "My Documents" or whatever on
-      Windows). Now, in your shell, type "ls" and hit "Enter". It shows what's
-      in the folder!
+      * Hit Command & Space and type "Terminal". Open it. This is your "command
+        line".
+      * Open up Finder (you can do the Command-Space thing again).
+    %h3 On Windows
+    :markdown
+      * Open up [Git-Bash][gitbash]. This is your "command line".
+      * Open your My Documents folder (or whatever it's called these days).
 
-  %section
-    %h2 It's a way to get around your computer
-    :markdown
-      Or at least, that's all you need to know for now. Let's walk through a
-      few commands.
+        [gitbash]: http://git-scm.com/download/win
+
