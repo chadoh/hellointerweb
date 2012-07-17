@@ -54,17 +54,74 @@ Layout: slides
       overwhelming, just stop for the day.
 
 %section
-  %section
-    %h2 Ingredients
-    %h3 On a Mac
-    :markdown
-      * Hit Command & Space and type "Terminal". Open it. This is your "command
-        line".
-      * Open up Finder (you can do the Command-Space thing again).
-    %h3 On Windows
-    :markdown
-      * Open up [Git-Bash][gitbash]. This is your "command line".
-      * Open your My Documents folder (or whatever it's called these days).
+  %h2 Ingredients
+  %h3 On a Mac
+  :markdown
+    * Hit Command & Space and type "Terminal". Open it. This is your "command
+      line".
+    * Open up Finder (you can do the Command-Space thing again).
+  %h3 On Windows
+  :markdown
+    * Open up [Git-Bash][gitbash]. This is your "command line".
+    * Open your My Documents folder (or whatever it's called these days).
 
-        [gitbash]: http://git-scm.com/download/win
+      [gitbash]: http://git-scm.com/download/win
+
+%section
+  %section
+    %h3 Listing
+    :markdown
+      The command line is a very simple way of interacting with a computer (simple
+      for the computer, anyhow!). You just type a command and then hit "Enter" on
+      your keyboard.
+
+      <small>This obviously requires a bit of memorization. But
+      the internet is there when we forget.</small>
+
+      One command that people use all the time is listing files. Try it now! Type
+      what comes after the dollar sign into your command line, and then hit Enter:
+
+          $ ls
+
+      Compare it to what you see in Finder/Explorer. It's an old-school way of
+      listing files!
+
+      &darr; That way to learn more about listing.
+
+  %section
+    %h3 Long Listing
+    :markdown
+      Now press the up arrow on your keyboard. Now that you got your `ls` back,
+      turn it into this & hit Enter:
+
+          $ ls -l
+
+      The `-l` is called a "flag". You added a `-l` flag to the `ls` command,
+      which tells `ls` to "long list" your files. This gives you all sorts of
+      info about your files, like who owns them, what you can do with them,
+      and the file size. Here's [what it all means][ls], if
+      you're curious (and brave).
+
+        [ls]: http://freeengineer.org/learnUNIXin10minutes.html#Listing
+
+      One more thing about listing, right this way. &darr;
+
+  %section
+    %h3 Listing Hidden Files
+    :markdown
+      All this time using your computer, and you never even knew it was hiding
+      all sorts of things from you! Enter this:
+
+          $ ls -al
+
+      Now you've added _two_ flags for `ls`. The `l` tells it to list "long",
+      the `a` tells it to list "all". Not just the usual stuff, but all the
+      stuff that's usually hidden from you, too!
+
+      #### Mac & Linux Only
+
+      Hidden files, as you can see, start with a dot. They're often called
+      "dotfiles". Notice the two "files" listed at the top, the single dot
+      and the double dot. These aren't actual files. You'll learn more about
+      them soon.
 
