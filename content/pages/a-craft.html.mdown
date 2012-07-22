@@ -1,0 +1,46 @@
+Layout: none
+
+# About These Instructions
+
+**title**: A Crafty Picture Frame
+
+## Also get this stuff
+
+In order to make this craft come out the right way, you'll need to go get these documents from Server, too:
+
+* [a-craft.css](/a-craft.css)
+* [a-craft.js](/a-craft.js)
+* [a-picture.png](/a-picture.png)
+
+# Instructions
+
+Show "a-picture.png" first, then fill out the following forms with your name.
+
+---
+<br>
+<br>
+  Name: ____________________________________________
+
+
+  dislike
+<br>
+
+---
+<br>
+<br>
+  Name: ____________________________________________
+
+
+  **Like!**
+<br>
+
+---
+<br>
+
+Now cut out the above forms and fold them so that only the words "dislike"
+and "Like!" are showing, and put them beneath the picture. These are
+"buttons".
+
+Now, when one of the "buttons" beneath the picture is "clicked", destroy
+everything you've made here and post the selected form back to Server for
+filing.
