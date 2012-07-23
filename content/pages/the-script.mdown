@@ -1,0 +1,49 @@
+Layout: none
+
+# The Script
+
+
+**FRIEND**: Browser! I have a project for you! You can get it from
+hellointerweb.com, and the instructions are called “/a-craft”.
+
+**BROWSER**: Thank you kindly, friend! Let me look that up. Let’s see... I
+will need the number for hellointerweb.com. [_pause_] Hey, Computer! Do
+you know the number for “hellointerweb.com”?
+
+**COMPUTER**: I have, like, almost no one in my address book. Hang on,
+Router usually knows these things. [_pause_] Router? Have you been
+listening?
+
+**ROUTER**: [_waking up, disgruntled_] Huh? What? What do you want?
+
+**COMPUTER**: Do you know the number for hellointerweb.com? Browser would
+like a document called “/a-craft” from her.
+
+**ROUTER**: [_lying_] Yeeaaaahh, hang on a second, let me look it up...
+[_whispering to DNS Server 1_] Pssst. Yo. You know the number for
+hellointerweb.com?
+
+**DNS SERVER 1**: [_quickly_] Hang on. I don’t know about .com stuff, myself.
+[_to DNS Server 2_] Sir? hellointerweb.com, please.
+
+**DNS SERVER 2**: [_very quickly_] 74.125.224.72
+
+**DNS SERVER 1**: [_to Router_] Router, wake up! That number you wanted.
+74.125.224.72. For hellointerweb.com
+
+**ROUTER**: [_waking up] Oh, oh, oh, right, [to computer_] hey computer, the
+number you wanted is 74.125.224.72
+
+**COMPUTER**: Thanks. Can you ask the server at that number for the document
+“/a-craft”, please?
+
+**ROUTER**: [_sighing, picks up a phone, calls Server_] Hey. Could you please
+send me “/a-craft”.
+
+**SERVER**: [_with great fanfare_] Whhyyyy, ceeertainly. [looks through a
+file] It’s on it’s way! [_throws router an envelope_] Have a lovely day!
+
+**ROUTER**: Hm. You too. [_yawns_] Computer, here go. [_hands envelope to
+Computer_]
+
+**COMPUTER**: [_to Browser_] Here you go, browser!
