@@ -1,18 +1,20 @@
 Layout: none
 
-# About These Instructions
+# a-craft.html
+
+## About These Instructions
 
 **title**: A Crafty Picture Frame
 
-## Also get this stuff
+#### Also get this stuff
 
 In order to make this craft come out the right way, you'll need to go get these documents from Server, too:
 
 * [a-craft.css](/a-craft.css)
 * [a-craft.js](/a-craft.js)
-* [a-picture.png](/a-picture.png)
+* [a-picture.jpeg](/a-picture.jpeg)
 
-# Instructions
+## Instructions
 
 Show "a-picture.png" first, then fill out the following forms with your name.
 

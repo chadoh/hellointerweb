@@ -1,11 +1,16 @@
 Layout: none
 
-# The Picture
+# a-craft.css
+
+## The Picture
 
 Give it a border of Popsicle sticks, and a background of brown paper.
 You can paint or color these, if you want.
 
-# The buttons
+## The buttons
 
 Fold them so the words aren't showing. On the "Like" button, draw a
-heart. On the "dislike" button, draw dog poop.
+heart. On the "dislike" button, draw poop.
+
+Put both of the buttons in the bottom right corner of the frame,
+with the heart on the right.

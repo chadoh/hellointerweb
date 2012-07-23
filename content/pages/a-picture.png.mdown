@@ -1,5 +1,0 @@
-Layout: none
-
-# A Picture
-
-![I'm on ur window](http://www.animalcontrolsolutions.com/images/raccoon-baby.jpg)
