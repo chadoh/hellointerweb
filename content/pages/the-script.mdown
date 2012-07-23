@@ -6,7 +6,7 @@ Layout: none
 **FRIEND**: Browser! I have a project for you! You can get it from
 hellointerweb.com, and the instructions are called “/a-craft”.
 
-**BROWSER**: Thank you kindly, friend! Let me look that up. Let’s see... I
+**BROWSER**: Thank you kindly, Friend! Let me look that up. Let’s see... I
 will need the number for hellointerweb.com. [_pause_] Hey, Computer! Do
 you know the number for “hellointerweb.com”?
 
@@ -26,22 +26,25 @@ hellointerweb.com?
 **DNS SERVER 1**: [_quickly_] Hang on. I don’t know about .com stuff, myself.
 [_to DNS Server 2_] Sir? hellointerweb.com, please.
 
-**DNS SERVER 2**: [_very quickly_] 74.125.224.72
+**DNS SERVER 2**: [_very quickly_] 75.101.145.87
 
 **DNS SERVER 1**: [_to Router_] Router, wake up! That number you wanted.
-74.125.224.72. For hellointerweb.com
+75.101.145.87. For hellointerweb.com
 
-**ROUTER**: [_waking up] Oh, oh, oh, right, [to computer_] hey computer, the
-number you wanted is 74.125.224.72
+**ROUTER**: [_waking up_] Oh, oh, oh, right, [_to computer_] hey computer, the
+number you wanted is 75.101.145.87
 
 **COMPUTER**: Thanks. Can you ask the server at that number for the document
-“/a-craft”, please?
+“/a-craft”, please? [_ROUTER sighs, picks up a phone, calls SERVER_]
 
-**ROUTER**: [_sighing, picks up a phone, calls Server_] Hey. Could you please
-send me “/a-craft”.
+**SERVER**: [_into phone_] Hello?
 
-**SERVER**: [_with great fanfare_] Whhyyyy, ceeertainly. [looks through a
-file] It’s on it’s way! [_throws router an envelope_] Have a lovely day!
+**ROUTER**: Hey. Could you please send me “/a-craft”.
+
+**SERVER**: [_with great fanfare_] Whhyyyy, ceeertainly. [_looks through a
+file, pulls out a document, makes a copy of it, puts copy in an envelope_]
+It’s on it’s way! [_throws the envelope to router_] Have a lovely day!
+[_hangs up_]
 
 **ROUTER**: Hm. You too. [_yawns_] Computer, here go. [_hands envelope to
 Computer_]
