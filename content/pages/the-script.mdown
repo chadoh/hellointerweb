@@ -20,11 +20,11 @@ listening?
 like a document called “/a-craft” from her.
 
 **ROUTER**: [_lying_] Yeeaaaahh, hang on a second, let me look it up...
-[_whispering to DNS Server 1_] Pssst. Yo. You know the number for
+[_whispering to DNS SERVER 1_] Pssst. Yo. You know the number for
 hellointerweb.com?
 
 **DNS SERVER 1**: [_quickly_] Hang on. I don’t know about .com stuff, myself.
-[_to DNS Server 2_] Sir? hellointerweb.com, please.
+[_ROUTER promptly falls asleep_] [_to DNS SERVER 2_] Sir? hellointerweb.com, please.
 
 **DNS SERVER 2**: [_very quickly_] 75.101.145.87
 
