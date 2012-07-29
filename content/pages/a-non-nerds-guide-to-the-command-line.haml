@@ -259,6 +259,19 @@ Layout: slides
 
 %section
   %section
+    %h3 Editing Files
+    :markdown
+      Looking at contents of files is nice, but you can also edit them right
+      from the command line. The simplest way is
+
+          $ touch tmp_file.txt
+          $ nano tmp_file.txt
+
+  %section
+    %h3 Vim
+
+%section
+  %section
     %h3 Delete, Delete.
     :markdown
       The command line has no safety nets! When you delete things, they're gone
@@ -289,23 +302,58 @@ Layout: slides
 
 %section
   %section
-    %h3 Root
+    %h3 Know Your Root
     :markdown
-      Be careful.
+      You're not allowed to do certain things on your computer, because you
+      could cause serious damage. You could literally _erase your whole hard
+      drive_ by running something like `rm -rf /`. Since no one wants to
+      accidentally destroy things, you have to do extra work to change system
+      files. You need _root access_. You need to be a _super user_. An
+      _administrator_.
 
-          $ sudo blah
-%section
-  %section
-    %h3 Editing Files
-    :markdown
-      Looking at contents of files is nice, but you can also edit them right
-      from the command line. The simplest way is
-
-          $ touch tmp_file.txt
-          $ nano tmp_file.txt
+      This works differently on Windows than anything else. This way for
+      instructions on any system. &darr;
 
   %section
-    %h3 Vim
+    %h3 Living Dangerously on Windows
+    :markdown
+      On Windows, you'll need to find the Git-Bash icon either on your Desktop
+      or in the Windows Menu (if you pinned it to the taskbar, this won't work
+      there.) Right-click the icon and select "Run as Administrator". Now you
+      can live as dangerously as you want! For example, you can now:
+
+          $ cd /c
+          $ mkdir woohoo
+          $ rm -r woohoo
+
+      &darr; Keep going for instructions for anything but Windows.
+
+  %section
+    %h3 Living Dangerously On Anything But Windows
+    :markdown
+      On most *nix-based systems these days, you're not allowed to just run
+      around as a super user because that's _scary_. Instead, you prefix
+      specific commands with `sudo`:
+
+          $ cd /
+          $ ls
+          $ mkdir hahaha
+          $ sudo mkdir hahaha
+
+      <small>`/` is the _root directory_, which is where your whole hard drive's
+      filesystem starts. When you `cd ..` here, you stay here.  You're not
+      allowed to change things in here unless you `sudo`, which means _Super
+      User DO_. When you type in your password, you won't see it.  You won't
+      even see [splats](#/3/3). That's intentional, just type your password
+      into the void & hit Enter.</small> 
+
+  %section
+    %h3 It's Like This
+    :markdown
+      [!["Make me a sandwich." "What? Make it yourself." "Sudo make me a sandwich." "OK."][comic]][link]
+
+        [comic]: http://imgs.xkcd.com/comics/sandwich.png "Proper User Policy apparently means Simon Says"
+        [link]:  http://xkcd.com/149/
 
 %section
   %section
@@ -381,7 +429,7 @@ Layout: slides
     %h3 Pipes
     :markdown
       Look at the slash key on your keyboard that's above the Enter key
-      (that's the backslash, by the way; the one on the ? key is just
+      (that's the backslash, by the way; the one on the `?` key is just
       "slash"). The vertical line above the backslash is called the "pipe"
       character.
 
@@ -439,7 +487,7 @@ Layout: slides
         $ fg
 
     To get it to go back to the background instead of just quitting it, hit
-    Control-Z while in it. (To quit top, hit `q`, just like in `less`.)
+    Control-Z while in it. (To quit `top`, hit `q`, just like in `less`.)
 
     To list things running in the background, use `bg`.
 
@@ -462,7 +510,7 @@ Layout: slides
     a `.nanorc`, and rc files for many other unix programs.
 
     `rc` stands for "Runtime Control", which doesn't shed a whole lot
-    of light. Just think of rc files as configuration files.
+    of light. Just remember that rc files are configuration files.
 
     Here's a nice getting-started [.bashrc][brc] file that you can
     download and edit with nano or vim to get started. You can
