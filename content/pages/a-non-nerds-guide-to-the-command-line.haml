@@ -118,10 +118,92 @@ Layout: slides
       the `a` tells it to list "all". Not just the usual stuff, but all the
       stuff that's usually hidden from you, too!
 
-      #### Mac & Linux Only
+      Hidden files start with a dot. They're often called "dotfiles". Notice
+      the two "files" listed at the top, the single dot and the double dot.
+      These aren't actual files. You'll learn more about them soon. &rarr;
 
-      Hidden files, as you can see, start with a dot. They're often called
-      "dotfiles". Notice the two "files" listed at the top, the single dot
-      and the double dot. These aren't actual files. You'll learn more about
-      them soon.
+%section
+  %section
+    %h3 Moving Around
+    :markdown
+      In the days when the command line was created, folders were called
+      _directories_. So to change directories, try this:
 
+          $ cd Desktop
+          $ ls
+
+      Now you're looking at your desktop on the command line. You Changed
+      into the Directory called Desktop.
+
+      &darr; That was to keep from getting lost.
+
+  %section
+    %h3 Where Are You?
+    :markdown
+      In case you forget what directory you're currently working in, you
+      can ask to be told:
+
+          $ pwd
+
+      This means Print Working Directory; it _prints_ the directory you're
+      _working_ in _to the screen_. (When this command was invented, screens
+      didn't exist, so it would have actually printed it!)
+
+      To get back to where you just came from, you could write `cd` followed
+      by all everything `pwd` showed you, minus the `/Desktop`. But there's
+      an easier way: &darr;
+
+  %section
+    %h3 Back With Your Parent
+    :markdown
+      To get into the _parent_ directory, do this
+
+          $ cd ..
+
+      So that `..` that you see when you `ls -a` is a link to a directory. A
+      link to the parent directory of the one you're in. If this all feels
+      really weird, try just `cd`ing into different folders and `cd ..`ing back
+      out for a while, hitting `pwd` to see where you are in between.
+
+      `..` isn't the only shortcut, though. &darr;
+
+  %section
+    %h3 Be Lazy
+    :markdown
+      Good coders are lazy. They do work up front (like memorizing things) to
+      prevent long-term work.  To avoid typing as much as possible, here are
+      some other shortcuts:
+
+      * `.` means "the directory you're in now". `ls .` does the same thing as
+        `ls`; `cd .` gets you nowhere. This comes in handy other times, though.
+      * `~` means "your home directory". You can `cd` into really obscure
+        folders and then `ls ~` or `cd ~` to get right back to where you started.
+      * `cd` without anything after it (without any _arguments_) does the same
+        thing as `cd ~`. It takes you home. (There's no place like it.)
+
+      Next up: reading files &rarr;
+
+%section
+  %section
+    %h3 Reading Files
+    :markdown
+      Lots of ways!
+
+          $ cat
+          $ more
+          $ less
+          $ nano
+
+%section
+  %section
+    %h3 Deleting Things
+    :markdown
+      Caution! There's no Trash when you do this; things will be gone forever.
+
+%section
+  %section
+    %h3 Root
+    :markdown
+      Be careful.
+
+          $ sudo blah
