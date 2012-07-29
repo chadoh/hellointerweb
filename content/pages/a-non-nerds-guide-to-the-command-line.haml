@@ -145,16 +145,16 @@ Layout: slides
 
           $ pwd
 
-      This means Print Working Directory; it _prints_ the directory you're
-      _working_ in _to the screen_. (When this command was invented, screens
+      This means Print Working Directory; it prints the directory you're
+      working in _to the screen_. (When this command was invented, screens
       didn't exist, so it would have actually printed it!)
 
       To get back to where you just came from, you could write `cd` followed
-      by all everything `pwd` showed you, minus the `/Desktop`. But there's
-      an easier way: &darr;
+      by everything `pwd` showed you, minus the `/Desktop`. But there's
+      an easier way. &darr;
 
   %section
-    %h3 Back With Your Parent
+    %h3 Back In With Your Parent
     :markdown
       To get into the _parent_ directory, do this
 
@@ -170,43 +170,122 @@ Layout: slides
   %section
     %h3 Be Lazy
     :markdown
-      Good coders are lazy. They do work up front (like memorizing things) to
-      prevent long-term work.  To avoid typing as much as possible, here are
-      some other shortcuts:
+      Good coders are lazy. They do work up front to prevent long-term work.
+      Here are some tricks to avoid typing:
 
       * `.` means "the directory you're in now". `ls .` does the same thing as
         `ls`; `cd .` gets you nowhere. This comes in handy other times, though.
-      * `~` means "your home directory". You can `cd` into really obscure
-        folders and then `ls ~` or `cd ~` to get right back to where you started.
+      * `~` (tilde) means "your home directory". You can `cd` into really obscure
+        folders and easily `ls ~` or `cd ~`.
       * `cd` without anything after it (without any _arguments_) does the same
-        thing as `cd ~`. It takes you home. (There's no place like it.)
-
-      Next up: reading files &rarr;
+        thing as `cd ~`. It takes you home.
+      * `*` (often called _splat_ because "asterisk" is _too long_) is a
+        wildcard; try `ls ~/D*` & `ls ~/*s`.
 
 %section
   %section
-    %h3 Renaming &amp; Making Copies
+    %h3 A New Name, A Move, A Copy
     :markdown
-      Renaming is the same as moving. So the command is
+      Renaming a file is the same thing as moving it. You "move" it from
+      one name to another name, or from one directory to another. Let's
+      create a file then move it:
 
-          $ mv old_file new_file
+          $ touch tmp.txt
+          $ mv tmp.txt ~/Desktop.txt
+          $ cd ~/Desktop
+          $ mv tmp.txt woohoo.txt
+
+      <small>(`touch` will create a file if it doesn't exist, or re-save a file that's
+      already there.)</small>
+
+      To learn to make copies, this way. &darr;
+
+  %section
+    %h3 Copy Cat
+    :markdown
+      Let's make two of something.
+
+          $ touch woohoo.txt
+          $ cp woohoo.txt tmp.txt && ls
+
+      `cp` makes copies. You just tell it the file to copy, and then the new place
+      and name to put it/name it.
+
+      The `&&` is how you enter multiple commands on one line. Make sure you use
+      _two_ "&"s, though; using only one does something very different! You'll learn
+      more about that later.
 
 %section
   %section
     %h3 Reading Files
     :markdown
-      Lots of ways!
+      Listing files is cool & all, but what if you want to see what's in them?
+      There are lots of ways to do this. Some of the most common are `cat`
+      (which con*cat*enates files), `more`, and `less`. Download [this
+      file][quote] into your current working directory (remember [pwd][pwd]?)
+      and then take a look:
 
-          $ cat
-          $ more
-          $ less
-          $ nano
+          $ cat this-is-water
+          $ more this-is-water
+          $ less this-is-water
+
+      Oh no! Now your whole terminal window has been taken over by `less`! And
+      the scrolling's all weird! What to do? &darr;
+
+        [pwd]: #/3/1
+        [quote]: /this-is-water
+
+  %section
+    %h3 Less Is More
+    :markdown
+      So `cat` and `more` just plopped the contents of the file into _standard
+      output_, but `less` took things over & messed up your scrolling. To get
+      out of it, hit `q`. Phew!
+
+      Ok, but let's try it again, with a bigger file. Download [this][dooms]
+      to your current working directory and then type
+
+          $ less my-father
+
+      <small>At this point I _must_ pause and tell you to hit _Tab_ on your
+      keyboard. Ta-da! Stop typing so much.</small>
+
+      Ok, now, to scroll down, hit `Space`, `d`, or `e`. To scroll up, hit
+      `b`, `u`, or `y`. These are common scrolling controls. `more` and `cat`
+      actually use them, too, if the content is too big to all fit in your
+      window.
+
+        [dooms]: /my-father-moved-through-dooms-of-love
 
 %section
   %section
-    %h3 Deleting Things
+    %h3 Delete, Delete.
     :markdown
-      Caution! There's no Trash when you do this; things will be gone forever.
+      The command line has no safety nets! When you delete things, they're gone
+      for good. No steenkin' _trash_, no steenkin' _recycle bin_. Just _gone_.
+      So be careful!
+
+      But to get rid of the files you just downloaded, you can
+
+          $ rm my-father-moved-through-dooms-of-love this-is-water
+
+      Note that you just passed `rm` _two_ files to delete. You can list
+      however many you want.
+
+      But to `rm` whole folders, you'll need a different trick. &darr;
+
+  %section
+    %h3 Removing Whole Directories
+    :markdown
+      If you try to `rm` a directory, `rm` will get all whiny and say it can't.
+      But you can make it do it anyway by passing it the `-r` flag.  (The `-r`
+      stands for _recursive_, because if you're peculiar you might say that
+      you're deleting the folder and then _recursively_ deleting everything in
+      it. Maybe?? Anyhow.) Try it out! Make a directory then delete it:
+
+          $ mkdir worthless-folder
+          $ rm worthless-folder
+          $ rm -r worthless-folder
 
 %section
   %section
@@ -215,3 +294,179 @@ Layout: slides
       Be careful.
 
           $ sudo blah
+%section
+  %section
+    %h3 Editing Files
+    :markdown
+      Looking at contents of files is nice, but you can also edit them right
+      from the command line. The simplest way is
+
+          $ touch tmp_file.txt
+          $ nano tmp_file.txt
+
+  %section
+    %h3 Vim
+
+%section
+  %section
+    %h3 Getting Other Unix Programs
+    :markdown
+      Sometimes the inbuilt stuff just isn't enough! If you want more, you'll need a _package manager_.
+
+          $ cowsay Package Managers ftw!
+            _______________________
+           < Package Managers ftw! >
+            -----------------------
+                    \   ^__^
+                     \  (oo)\_______
+                        (__)\       )\/\
+                            ||----w |
+                            ||     ||
+
+      Yes! An [ascii][ascii] cow! This way to get your own. &darr;
+
+        [ascii]: https://en.wikipedia.org/wiki/ASCII
+
+  %section
+    %h3 Getting Cowsay and other fun things on Linux
+    :markdown
+      If you're using Linux, then you already have a package manager that you
+      can use. On Ubuntu, you have two options, `apt-get` or `aptitude`.
+      `aptitude` seems to be preferred by some people because it's better at
+      uninstalling things. So:
+
+          $ sudo aptitude install cowsay
+          $ cowsay Hooray!
+
+      If you're using a different version of Linux, then instead of `aptitude`
+      you might have `yum` or something. Just search the web for what package
+      manager to use with your flavor of Linux.
+
+  %section
+    %h3 Getting Cowsay and other fun things on OSX
+    :markdown
+      The preferred package manager for your Mac running OSX these days is
+      [Homebrew][brew].  An older way was MacPorts, so you might still hear
+      people mention that now & then. You can follow the link to Homebrew to
+      see how to install it, but once you do, go ahead and
+
+          $ brew install cowsay
+          $ cowsay Hooray!
+
+        [brew]: http://mxcl.github.com/homebrew/
+
+  %section
+    %h3 Getting Cowsay and other fun things on Windows
+    :markdown
+      Coming soon&hellip;
+
+%section
+  %h3 Read The Effing Manual (rtfm)
+  :markdown
+    Now and then, when [n00bs][n00b] ask for help on forums, the crotchety
+    enlightened will respond with a curt "rtfm". What manual??
+
+    Usually, every unix program comes with a manual (also called a
+    "man page"). To read it, just do this with any command:
+
+        $ man ls
+
+    Go ahead and check out the manual for some of the programs you've
+    learned about (`cd`, `less`, `cowsay`, etc).
+
+      [n00b]: https://en.wikipedia.org/wiki/N00b
+
+%section
+  %section
+    %h3 Pipes
+    :markdown
+      Look at the slash key on your keyboard that's above the Enter key
+      (that's the backslash, by the way; the one on the ? key is just
+      "slash"). The vertical line above the backslash is called the "pipe"
+      character.
+
+      The philosophy of unix is that programs should do one very simple thing,
+      and do it well. Then you can use pipes to hook multiple programs
+      together. Try this:
+
+          $ ls ~ | less
+
+      You piped the results of `ls` into `less`! There are other kinds of
+      pipes, too. &darr;
+
+  %section
+    %h3 A Series Of Pipes
+    :markdown
+      Try this:
+
+          $ echo "So what?"
+
+      Indeed, so what? `echo` just spits out what you tell it to. But with
+      pipes, it gets cooler.
+
+          $ echo "Here's something" > tmp.txt && less tmp.txt
+
+      The `>` pipe _totally overwrites_ a file. Try this now:
+
+          $ echo "& more." >> tmp.txt && less tmp.txt
+
+      The `>>` pipe _appends_ to a file without destroying what was already
+      there.
+
+  %section
+    %h3 Blanking Out Files
+    :markdown
+      There's an interesting twist on the `>` pipe: it doesn't need anything
+      before it. Try this:
+
+          $ > tmp.txt
+
+      You just piped _nothing_ into tmp.txt. You overwrote all of its contents
+      with nothing. Open it up (`cat` it, or `more` it, or whatever-you-like
+      it) and you'll see that it's now empty.
+
+
+%section
+  %h3 In The Background
+  :markdown
+    Sometimes it's nice to let things run in the background. To start something
+    up in the background right away, do this:
+
+        $ top &
+
+    This starts `top` in the background. To put it back in the foreground:
+
+        $ fg
+
+    To get it to go back to the background instead of just quitting it, hit
+    Control-Z while in it. (To quit top, hit `q`, just like in `less`.)
+
+    To list things running in the background, use `bg`.
+
+%section
+  %h3 I Quit
+  :markdown
+    To _force quit_ a process that seems to be stuck, just hit Control-C.
+
+    This is used in a lot of places. Open up `ls ~ | less` and then hit
+    Shift-F. This _follows_ the file, automatically showing you new content
+    as it appears. To get it to stop following the file, you have to
+    "interrupt" it, which you do with Control-C. Then you can `q` as normal
+    to get out of `less` altogether.
+
+%section
+  %h3 Making It Pretty
+  :markdown
+    Bash can be customized by putting a `.bashrc` file in your home
+    directory. This is a common pattern; you can also have a `.vimrc`,
+    a `.nanorc`, and rc files for many other unix programs.
+
+    `rc` stands for "Runtime Control", which doesn't shed a whole lot
+    of light. Just think of rc files as configuration files.
+
+    Here's a nice getting-started [.bashrc][brc] file that you can
+    download and edit with nano or vim to get started. You can
+    [search Github][dotfiles] for "dotfiles" for lots of other ideas.
+
+      [brc]: 
+      [dotfiles]: https://github.com/search?q=dotfiles+bash&repo=&langOverride=&start_value=1&type=Everything&language=

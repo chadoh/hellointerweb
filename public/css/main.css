@@ -211,16 +211,21 @@ body {
   border-radius: 0.3em;
   background: #3F3F3F;
   padding: 0 0.2em;
+  white-space: nowrap;
 }
 
 .reveal pre code {
   display: block;
+  white-space: pre;
 }
 
 .reveal small {
 	font-size: 60%;
 	line-height: 1em;
-	vertical-align: top;
+  vertical-align: top;
+}
+.reveal small * {
+  vertical-align: inherit;
 }
 
 .reveal q {	
