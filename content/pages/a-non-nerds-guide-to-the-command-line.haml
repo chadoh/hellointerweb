@@ -233,7 +233,6 @@ Layout: slides
       the scrolling's all weird! What to do? &darr;
 
         [pwd]: #/3/1
-        [quote]: /this-is-water
 
   %section
     %h3 Less Is More
@@ -262,14 +261,58 @@ Layout: slides
     %h3 Editing Files
     :markdown
       Looking at contents of files is nice, but you can also edit them right
-      from the command line. The simplest way is
+      from the command line. The simplest way is arguably `nano`. Go ahead
+      and save [this file][dooms] to your current working directory and
 
-          $ touch tmp_file.txt
-          $ nano tmp_file.txt
+          $ nano my-father-moved-through-dooms-of-love
+
+      You can move the cursor around in `nano` with the arrow keys.  `nano`
+      also has a bunch of shortcuts, which are all listed at the bottom.
+      "WriteOut" means "Write the contents of this file Out to disc", which
+      really just means "save". So to save the file after editing it, hit
+      Control-O.
+
+        [quote]: /my-father-moved-through-dooms-of-love
 
   %section
     %h3 Vim
+    :markdown
+      `vim` is weird & [hard to learn][vimbook], but a lot of people [love it a
+      lot][whyvim]. You'll inevitably run into it on your adventures, so it'll
+      be good to know some basics.
 
+      So let's open it up.
+
+          $ vim my-father-moved-through-dooms-of-love
+
+      Ok, there's a lot to say; right this way please. &darr;
+
+        [vimbook]: http://pragprog.com/book/dnvim/practical-vim
+        [whyvim]:  http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+
+  %section
+    %h3 More Vim
+    :markdown
+      * **Modes**: `vim` starts out in "normal" mode, in which you cannot
+        edit text. To move around in normal mode, press `h`, `j`, `k`, & `l`.
+      * **Insert**: To enter "insert" mode (in which you actually edit stuff),
+        hit `i`. To get back into "normal" mode (where you're _supposed to
+        be_), hit "Escape" on your keyboard (waay in the top left).
+      * **Commands**: To save, make sure you're in Normal mode and type `:w`
+        and press Enter. To get out of `vim`, type `:q`. (You can combine these
+        to save on quit: `:wq`.)
+
+  %section
+    %h3 Flame Wars
+    :markdown
+      Some programmers get really territorial and religious about their editor
+      of choice. They make gang signs for `vim` and `emacs` (another popular
+      editor). It's silly.
+
+      [![comic about editors][comic]][link]
+
+        [comic]: http://imgs.xkcd.com/comics/real_programmers.png "Real programmers set the universal constants at the start such that the universe evolves to contain the disk with the data they want."
+        [link]:  http://xkcd.com/378/
 %section
   %section
     %h3 Delete, Delete.
@@ -409,7 +452,7 @@ Layout: slides
       Coming soon&hellip;
 
 %section
-  %h3 Read The Effing Manual (rtfm)
+  %h3 Read The Effing Manual
   :markdown
     Now and then, when [n00bs][n00b] ask for help on forums, the crotchety
     enlightened will respond with a curt "rtfm". What manual??
