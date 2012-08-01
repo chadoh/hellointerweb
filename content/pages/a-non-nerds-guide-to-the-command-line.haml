@@ -175,14 +175,16 @@ Layout: slides
       Good coders are lazy. They do work up front to prevent long-term work.
       Here are some tricks to avoid typing:
 
-      * `.` means "the directory you're in now". `ls .` does the same thing as
-        `ls`; `cd .` gets you nowhere. This comes in handy other times, though.
+      * `.` means "the directory you're in now". `ls .` = `ls`; `cd .` does nothing.
+        But it's useful sometimes.
       * `~` (tilde) means "your home directory". You can `cd` into really obscure
         folders and easily `ls ~` or `cd ~`.
       * `cd` without anything after it (without any _arguments_) does the same
         thing as `cd ~`. It takes you home.
       * `*` (often called _splat_ because "asterisk" is _too long_) is a
         wildcard; try `ls ~/D*` & `ls ~/*s`.
+      * `cd -` takes you back to the previous directory, so you can switch back &
+        forth between two easily.
 
 %section
   %section
@@ -214,8 +216,11 @@ Layout: slides
       and name to put it/name it.
 
       The `&&` is how you enter multiple commands on one line. Make sure you use
-      _two_ "&"s, though; using only one does something very different! You'll learn
-      more about that later.
+      _two_ "&"s, though; using only one does something _veeery_ different!
+      You'll be very confused if you only use one!
+
+      <small>Using only one `&` starts something in the background. Search online
+      to find out more about it.</small>
 
 %section
   %section
@@ -519,24 +524,6 @@ Layout: slides
       with nothing. Open it up (`cat` it, or `more` it, or whatever-you-like
       it) and you'll see that it's now empty.
 
-
-%section
-  %h3 In The Background
-  :markdown
-    Sometimes it's nice to let things run in the background. To start something
-    up in the background right away, do this:
-
-        $ top &
-
-    This starts `top` in the background. To put it back in the foreground:
-
-        $ fg
-
-    To get it to go back to the background instead of just quitting it, hit
-    Control-Z while in it. (To quit `top`, hit `q`, just like in `less`.)
-
-    To list things running in the background, use `bg`.
-
 %section
   %h3 I Quit
   :markdown
@@ -559,8 +546,9 @@ Layout: slides
     of light. Just remember that rc files are configuration files.
 
     Here's a nice getting-started [.bashrc][brc] file that you can
-    download and edit with `nano` or `vim` to get started. You can
-    [search Github][dotfiles] for "dotfiles" for lots of other ideas.
+    download and edit with `nano` or `vim` to get started (make sure to save it
+    to your home folder as ".bashrc" (_with the dot!!_)). You can [search
+    Github][dotfiles] for "dotfiles" for lots of other ideas.
 
-      [brc]: 
+      [brc]: /.bashrc
       [dotfiles]: https://github.com/search?q=dotfiles+bash&repo=&langOverride=&start_value=1&type=Everything&language=
