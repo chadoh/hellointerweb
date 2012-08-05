@@ -1,0 +1,230 @@
+Layout: slides
+Link text: Week 3: Clapping bells and blowing whistles; your brochure gets interactive (and also starts dolling up for even the senior-citizen browsers)
+
+%section
+  %section
+    %h1 Week 3
+    %h3
+      Clapping bells and blowing whistles; your brochure gets interactive (and
+      also starts dolling up for even the senior-citizen browsers)
+
+  %section
+    %h3 Summary
+    %p
+      Stop using anchor tags to navigate your FAQ and use slideToggle! Better
+      yet, use both!
+
+  %section
+    %h3 Topics
+    %p JavaScript, jQuery, Mondernizr, who made up HTML anyhow?
+
+%section
+  %h3 Try JavaScript!
+  :markdown
+
+    [![codeacadamy.com][image]][code]
+
+    <small>(That's a link!)</small>
+
+    JavaScript is an uglier language than Ruby, but you'll see that a lot of
+    the concepts are the same.
+
+      [image]: http://ammacentre.org/blog/wp-content/uploads/2012/01/CodeAcademy1-300x294.jpg
+      [code]: http://www.codecademy.com/
+
+%section
+  %h3 JavaScript In Your Inspector
+  :markdown
+    The "Inspect Element" thing in Chrome does so much more than show you HTML
+    and CSS! Open it up and go to the "Console" tab. Now try out some of that
+    JavaScript you just learned. Maybe this:
+
+        > alert("It's a JavaScript console!");
+
+%section
+  %h3 Ransack the FAQ
+  :markdown
+    Download [this new FAQ page][faq].
+
+    Then go ahead and make the header and whatnot match your spiffy index page.
+    Don't even bother putting in your own questions and answers, yet. You can
+    do that over this week.
+
+    <small>(Yes, this is a pain. We're going to figure out how to avoid all of
+    this work next week.)</small>
+
+      [faq]: https://raw.github.com/chadoh/tree-octopus/gh-pages/faq.html
+
+%section
+  %section
+    %h3 jQuery FTW
+    :markdown
+      Comment out the `<ul>` that has the list of questions. We're going to
+      give people a different way of hiding and showing questions.
+
+      Now add this to you FAQ right before the `</body>`:
+
+          <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+          <script src='/main.js'></script>
+
+      And create a file in your project called "main.js".
+
+  %section
+    %h3 Hiding The Answers
+    :markdown
+      jQuery makes doing some things with JavaScript a lot easier. Reload your
+      page and go to the Console in your Inspector; we're going to try some
+      things out before we fill in that "main.js" file.
+
+      Try this:
+
+          > $('dd').hide();
+
+      This tells jQuery to find all `<dd>` elements, which are where all your
+      answers are.
+
+  %section
+    %h3 Making The Questions Click
+    :markdown
+      OK, the answers are hidden. Neat, I guess? But you'll probably want
+      people to see them at some point. Try this:
+
+          > $('dt').click(function(){
+              $(this).next().slideToggle();
+            });
+
+      <small>You can press Control-Enter to put line breaks in the
+      console.</small>
+
+      Now try clicking a question. Ta-da!
+
+      <small>You might want to add `cursor: pointer` to the CSS for those
+      `<dt>`s, now.</small>
+
+  %section
+    %h3 Save That
+    :markdown
+      That's cool. So go ahead and put all of that jQuery code that you tried
+      out in your Console into your "main.js" file. But put it all inside this:
+
+          $(document).ready(function(){
+            // your jQuery here
+          });
+
+      This makes sure that your jQuery doesn't run before the HTML is done
+      loading into your browser. You should always make to do this, otherwise
+      your JavaScript might not do what you want it to.
+
+%section
+  %h3 Commit Yr Changes!
+  :markdown
+    Have you been remembering to do this throughout the last week? You should commit
+    often! That commit trail is really important.
+
+        $ cd <the directory withy your project>
+        $ git add .
+        $ git commit -m "Spiffing out the FAQ"
+
+%section
+  %section
+    %h3 Some Hard Truths
+    :markdown
+      If you're on Windows and you have Internet Explorer 8 (or 7 or 6), open
+      up a page in your site using it.
+
+      If you're on anything else, download [this old version of Firefox][ff35]
+      and open your site in it.
+
+        [ff35]: https://www.mozilla.org/en-US/firefox/all-older.html
+
+  %section
+    %img(alt="sad face" src="http://www.gamesaktuell.de/screenshots/970x546/2012/04/Trollfaces-Kompendium_-_Okay_Guy.png")
+
+%section
+  %h3 Who Makes Up HTML Anyhow?
+  :markdown
+    <span class="photo-grid">
+      [![Tim Berners-Lee][tbl-pic]][tbl-link]
+      [![W3C][w3c-pic]][w3c-link]
+      [![WHATWG][wwg-pic]][wwg-link]
+      [![Google][ggl-pic]][ggl-link]
+      [![Apple][apl-pic]][apl-link]
+      [![Microsoft][mso-pic]][mso-link]
+      [![Mozilla][mza-pic]][mza-link]
+      [![Opera][opr-pic]][opr-link]
+    </span>
+
+      [tbl-pic]: /assets/images/tim.jpg
+      [tbl-link]: https://en.wikipedia.org/wiki/Tim_Berners-Lee
+      [w3c-pic]: /assets/images/w3c.jpg
+      [w3c-link]: https://en.wikipedia.org/wiki/World_Wide_Web_Consortium
+      [wwg-pic]: /assets/images/whatwg.png
+      [wwg-link]: https://en.wikipedia.org/wiki/Web_Hypertext_Application_Technology_Working_Group
+
+      [ggl-pic]: /assets/images/google.jpg
+      [ggl-link]: https://en.wikipedia.org/wiki/WebM
+      [apl-pic]: /assets/images/apple.jpg
+      [apl-link]: https://en.wikipedia.org/wiki/Canvas_element
+      [mso-pic]: /assets/images/microsoft.png
+      [mso-link]: https://en.wikipedia.org/wiki/Favicon
+
+      [mza-pic]: /assets/images/firefox.jpg
+      [mza-link]: http://hacks.mozilla.org/2011/06/with-the-power-of-html5/
+      [opr-pic]: /assets/images/opera.jpg
+      [opr-link]: http://css.dzone.com/news/opera-adds-html5-webcam-input
+
+%section
+  %h3 Helping Out People With Old Browsers
+  :markdown
+    It's sad that your site is ugly with older browsers. People using them
+    won't even know about the pretty version! They'll just think you suck at
+    making websites. :-(
+
+    Let's give them some love. We can use more JavaScript to make their visit
+    as pleasant as possible.
+
+    [![Modernizr][mdrn-pic]][mdrn-link]
+
+      [mdrn-pic]: http://webservices.ahc.ufl.edu/files/2011/09/modernizr3.jpg
+      [mdrn-link]: http://modernizr.com/docs/
+
+%section
+  %h3 Commit Yr Changes!
+  :markdown
+    We've made interesting changes. Let's record what we've done.
+
+        $ git add .
+        $ git commit -m "Added in Modernizr"
+
+%section
+  %section
+    %h3 Things To Play With Before Next Week
+    :markdown
+      * Enter `ruby -v` on your command line. If you don't get an error
+        message, congrats! Otherwise, [install Ruby][inst]. We'll need it next
+        week.
+      * Continue [codeacademy][code] (and try out some of the examples on your
+        own web page!)
+      * Do a simple [jQuery tutorial][tut]
+      * Continue [tryruby.org][ruby]
+
+        [inst]: http://ruby.about.com/od/beginningruby/a/installhub.htm
+        [code]: http://www.codecademy.com/
+        [tut]:  http://docs.jquery.com/Tutorials:How_jQuery_Works
+        [ruby]: http://tryruby.org/
+
+  %section
+    %h3 Blogs To Follow
+    :markdown
+      Now that you've learned a bit about who makes the rules, you may want to keep up with the evolving standards of HTML and CSS.
+
+      * [HTML5Doctor][5dr]
+      * [CSS3.info][css3]
+
+      Also, you can do super pretty stuff with just CSS3 (no need for that many images). For example:
+
+      * [CSS3 Buttons][btns]
+
+        [5dr]:  http://html5doctor.com/
+        [css3]: http://www.css3.info/
+        [btns]: http://hellohappy.org/css3-buttons/
