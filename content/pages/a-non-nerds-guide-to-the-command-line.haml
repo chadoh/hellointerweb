@@ -191,16 +191,21 @@ Layout: slides
     %h3 A New Name, A Move, A Copy
     :markdown
       Renaming a file is the same thing as moving it. You "move" it from
-      one name to another name, or from one directory to another. Let's
-      create a file, move it, and then rename it:
+      one place/name to another. Let's create a file:
 
           $ touch tmp.txt
-          $ mv tmp.txt ~/Desktop
-          $ cd ~/Desktop
-          $ mv tmp.txt woohoo.txt
 
       <small>(`touch` will create a file if it doesn't exist, or re-save a file that's
       already there.)</small>
+
+      move it:
+
+          $ mv tmp.txt ~/Desktop
+
+      and then rename it:
+
+          $ cd ~/Desktop
+          $ mv tmp.txt woohoo.txt
 
       To learn to make copies, this way. &darr;
 
