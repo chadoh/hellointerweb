@@ -198,16 +198,35 @@ Link text: Week 3: Clapping bells and blowing whistles; your brochure gets inter
 
 %section
   %section
+    %h3 Prep For Next Week
+    :markdown
+      * Download [VirtualBox][vbox] and [Vagrant][vgnt]
+      * Download [these extra files][files], and copy them into your project's folder
+      * Run the following commands _in your project's folder_ (that is, in your
+        command line, make sure you're in your project's folder, then copy &
+        paste all this)
+      <br>
+
+          git mv fonts images stylesheets index.html faq.html sightings.html public
+          vagrant box add lucid32 http://is.gd/sinatra_starter
+          vagrant init
+          vagrant up
+          vagrant halt
+
+        [vbox]:  http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html#vbox
+        [vgnt]:  http://vagrantup.com/
+        [files]: https://github.com/downloads/chadoh/tree-octopus/tree-octopus%20sinatra%20files.zip
+
+  %section
     %h3 Things To Play With Before Next Week
     :markdown
-      * Enter `ruby -v` on your command line. If you don't get an error
-        message, congrats! Otherwise, [install Ruby][inst]. We'll need it next
-        week.
       * Continue [codeacademy][code] (and try out some of the examples on your
         own web page!)
       * Do a simple [jQuery tutorial][tut]
       * Continue [tryruby.org][ruby]
 
+        [vbox]: http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html#vbox
+        [vgnt]: http://vagrantup.com/
         [inst]: http://ruby.about.com/od/beginningruby/a/installhub.htm
         [code]: http://www.codecademy.com/
         [tut]:  http://docs.jquery.com/Tutorials:How_jQuery_Works
