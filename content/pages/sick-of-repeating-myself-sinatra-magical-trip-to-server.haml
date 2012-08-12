@@ -3,13 +3,21 @@ Summary: What's a server good for, anyhow?
 %h1 Week 4: I'm so sick of repeating myself! Sinatra takes us on a magical trip to the server.
 
 :markdown
-  topics: [Sinatra][sntr], erb, [Heroku][hrku], [Github][gthb]
+  topics: [VirtualBox][vbox], Virtual Machines, ssh, [Sinatra][sntr], erb, [Heroku][hrku], [Github][gthb]
 
   Outline
   -------
 
-  * Check it: enter `irb` on your command line. Looks familiar, dunt it?
+  * By the end of class today, we're going to
+    * Deploy our app to [Heroku][hrku] so that other people can visit it online
+    * Clean up our html so that we don't repeat ourselves anymore
   * Singing with [Sinatra][sntr]
+    * download VirtualBox, the base box I set up, and the 5 new files they need before class
+    * run `git mv fonts images stylesheets index.html faq.html sightings.html public` to move all of your old stuff to the "public" folder
+    * in a separate terminal window, run `vagrant up` and then `vagrant ssh`
+    * once `ssh`ed into your Vagrant virtual machine (VM), type `pwd`. Now `cd /vagrant`. Now `ls`. It's all your files.
+    * type `foreman start`. It will say that Sinatra took the stage on 5000.
+    * In your browser, visit `localhost:5000`. That's the 5000 `foreman` was talking about.
   * Pushing to [Heroku][hrku]
   * Viewing our site _on the Interweb how freaking cool is that??_
   * And it's all been free so far!!
@@ -20,6 +28,7 @@ Summary: What's a server good for, anyhow?
 
   * Next week we're going to use a database called MongoDB! Go ahead and [learn a little bit about it][mong] (click the "Try it out" link).
 
+    [vbox]: https://www.virtualbox.org/
     [sntr]: http://www.sinatrarb.com/intro
     [hrku]: http://www.heroku.com/
     [gthb]: https://github.com/

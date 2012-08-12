@@ -38,6 +38,9 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history, if you want
 #export HISTIGNORE="cd:cd -:pwd;exit:date:* --help"
 
+# where to look for unix programs (different folders separated with `:`)
+# `$PATH` is the original; this just adds new things without destroying it
+export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 ### Shortcuts ###
 # Easier navigation: .., ..., ~ and -
@@ -162,8 +165,8 @@ On_IPurple='\[\e[10;95m\]'  # Purple
 On_ICyan='\[\e[0;106m\]'    # Cyan
 On_IWhite='\[\e[0;107m\]'   # White
 
-# On a Mac with homebrew, you should `brew install git` to get this
-# This will give errors if you don't have homebrew, so it's been
+# On a Mac with homebrew, you should `brew install git bash-completion` to get
+# this. This will give errors if you don't have homebrew, so it's been
 # commented out by default
 #if [ -f `brew --prefix`/etc/bash_completion ]; then
   #source `brew --prefix`/etc/bash_completion
@@ -173,10 +176,10 @@ On_IWhite='\[\e[0;107m\]'   # White
   #export GIT_PS1_SHOWUNTRACKEDFILES=1
 #else
   function parse_git_dirty() {
-    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo " * ⮁ "
+    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo " *"
   }
   function __git_ps1() {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty) ⮁ /"
   }
 #fi
 
