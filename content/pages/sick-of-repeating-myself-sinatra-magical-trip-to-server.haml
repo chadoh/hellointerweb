@@ -3,7 +3,7 @@ Summary: What's a server good for, anyhow?
 %h1 Week 4: I'm so sick of repeating myself! Sinatra takes us on a magical trip to the server.
 
 :markdown
-  topics: [VirtualBox][vbox], Virtual Machines, ssh, [Sinatra][sntr], erb, [Heroku][hrku], [Github][gthb]
+  topics: [VirtualBox][vbox], Virtual Machines, ssh, [Sinatra][sntr], erb, [Heroku][hrku]
 
   Outline
   -------
@@ -12,16 +12,31 @@ Summary: What's a server good for, anyhow?
     * Deploy our app to [Heroku][hrku] so that other people can visit it online
     * Clean up our html so that we don't repeat ourselves anymore
   * Singing with [Sinatra][sntr]
-    * download VirtualBox, the base box I set up, and the 5 new files they need before class
-    * run `git mv fonts images stylesheets index.html faq.html sightings.html public` to move all of your old stuff to the "public" folder
-    * in a separate terminal window, run `vagrant up` and then `vagrant ssh`
-    * once `ssh`ed into your Vagrant virtual machine (VM), type `pwd`. Now `cd /vagrant`. Now `ls`. It's all your files.
+    * learning about Virtual Machines
+    * run `vagrant ssh`&mdash;I set it up so you're automatically put in `/vagrant`. Run `ls`. It's all your files.
     * type `foreman start`. It will say that Sinatra took the stage on 5000.
     * In your browser, visit `localhost:5000`. That's the 5000 `foreman` was talking about.
   * Pushing to [Heroku][hrku]
-  * Viewing our site _on the Interweb how freaking cool is that??_
-  * And it's all been free so far!!
-  * Setting up & pushing to [Github][gthb]
+    * Setup Heroku: go through [the first 3 steps here][hrku-start]
+    * [Deploy to the web][hrku-push]!
+  * Cleaning your code: Don't Repeat Yourself
+    * `git mv index.html views/index.erb`
+    * `git mv faq.html views/faq.erb`
+    * `git mv sightings.html views/sightings.erb`
+    * Create a new file, `views/layout.erb`, and put `<%= yield %>` in it
+    * Open app.rb and change the `get '/'` from the `redirect` to `erb :index`
+    * Restart your server in your VM; switch to that terminal window and hit Ctrl-C, then press up & Enter
+    * Visit `localhost:5000` again: It's your index page, without needing to put `/index.html` in the URL!
+    * Ok, copy and paste all of `index.erb` into `layout.erb`
+    * In `layout.erb`, remove all `<article class='indent'>`s and replace them with `<%= yield %>`
+    * In `index.erb`, remove everything _except_ the `<article class='indent'>`s
+    * Reload the page in your browser
+    * In `faq.erb` and `sightings.erb`, remove everything except `<article class='indent'>`s and `<article class='sighting'>`s
+    * In `app.rb`, add `get 'faq' do; erb :faq; end` and `get 'sightings' do; erb :sightings; end`
+    * Change `layout.erb` so that the links at the top point to `/`, `faq`, and `sightings` instead of their `.html` equivalents
+    * Change `layout.erb` so that it automatically adds `class='menu-current'` to the `<li>` for the current page, and _doesn't_ link to it
+    * Restart your server
+    * Now changes you make to the heading will show up on every page!
 
   Assignment
   ----------
@@ -31,5 +46,7 @@ Summary: What's a server good for, anyhow?
     [vbox]: https://www.virtualbox.org/
     [sntr]: http://www.sinatrarb.com/intro
     [hrku]: http://www.heroku.com/
+    [hrku-start]: https://devcenter.heroku.com/articles/quickstart
+    [hrku-push]:  https://devcenter.heroku.com/articles/ruby#deploy-to-herokucedar
     [gthb]: https://github.com/
     [mong]: http://www.mongodb.org/
