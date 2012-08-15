@@ -1,5 +1,5 @@
 week-1-heroic-browser-thoughtful-server-mysterious-documents
 week-2-fill-the-web-with-lies-your-first-website-is-just-a-brochure
 week-3-clapping-bells-blowing-whistles-your-brochure-gets-interactive
-sick-of-repeating-myself-sinatra-magical-trip-to-server
-oh-mongo-day-weve-transcended-the-brochure
+week-4-sick-of-repeating-myself-sinatra-magical-trip-to-server
+oh-postgres-day-weve-transcended-the-brochure

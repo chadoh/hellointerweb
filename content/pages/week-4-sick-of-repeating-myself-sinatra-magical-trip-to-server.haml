@@ -1,0 +1,196 @@
+Layout: slides
+Link text: Week 4: I'm so sick of repeating myself! Sinatra takes us on a magical trip to the server
+
+%section
+  %section
+    %h1 Week 4
+    %h3
+      I'm so sick of repeating myself! Sinatra takes us on a magical trip to
+      the server
+
+  %section
+    %h2 Summary
+    %p
+      What's a server good for, anyhow?
+
+  %section
+    %h2 Topics
+    :markdown
+      [VirtualBox][vbox], Virtual Machines, ssh, [Sinatra][sntr], erb, [Heroku][hrku]
+
+        [vbox]: https://www.virtualbox.org/
+        [sntr]: http://www.sinatrarb.com/intro
+        [hrku]: http://www.heroku.com/
+
+%section
+  %h2 Where We're Going
+  :markdown
+    We're covering a lot of ground tonight. By the end of class, we're going to
+
+    * Deploy our app to [Heroku][hrku] so that other people can visit it online
+    * Clean up our html so that we don't repeat ourselves anymore
+
+      [hrku]: http://www.heroku.com/
+
+%section
+  %section
+    %h2 Singing With Sinatra
+    :markdown
+      I already did all the work for you, so we can just get started! In your
+      project's folder, run this:
+
+          $ vagrant up && vagrant ssh
+          $ foreman start
+
+      Now visit "localhost:5000" in your browser.
+
+      <small>For an explanation of Virtual Machines, VirtualBox, Vagrant,
+      `ssh`, `foreman`, and this "localhost:5000" business; this way. &darr;</small>
+
+  %section
+    %h2 Virtual Machines
+    :markdown
+      Coming soon.
+
+  %section
+    %h2 VirtualBox
+    :markdown
+      Coming soon.
+
+  %section
+    %h2 ssh
+    :markdown
+      Coming soon.
+
+  %section
+    %h2 foreman
+    :markdown
+      Coming soon
+
+  %section
+    %h2 localhost:5000
+    :markdown
+      Coming soon.
+
+%section
+  %h2 Deploy With Heroku
+  :markdown
+    Since I've set up a whole little Sinatra app for you, you can deploy it to
+    Heroku without doing any more work! You'll need to
+
+      * Commit your changes to git
+      * Setup Heroku: go through [the first 3 steps here][hrku-start]
+      * [Deploy to the web][hrku-push]!
+
+      [hrku-start]: https://devcenter.heroku.com/articles/quickstart
+      [hrku-push]:  https://devcenter.heroku.com/articles/ruby#deploy-to-herokucedar
+
+%section
+  %h2 Don't Repeat Yourself
+  :markdown
+    For the rest of class, we're going to see how Sinatra can help us DRY up our code.
+
+    Open up "app.rb" in your text editor. What do you think this means?
+
+%section
+  %section
+    %h2 Routing
+    :markdown
+      Change the stuff inside the `do...end` to a simple string, maybe "Good day,
+      World!"
+
+      Now restart your server and revisit "localhost:5000/"
+      in your browser.
+
+  %section
+    %h2 The Meaning Of /
+    :markdown
+      When you visit a website, there's always a `/` at the end of the URL.
+      "duckduckgo.com/", not just "duckduckgo.com". Your browser puts it in for
+      you if you leave it out, and a lot of browsers these days don't even show
+      it, because it's just noise. Most people don't need to care.
+
+      But _you_ need to care! Because you're setting up your routes! You're
+      saying "when people visit my website without putting in a '/whatevah', do
+      _this_".
+
+      Let's make `/` do something interesting! Change it from the simple string
+      to `erb :index`. Now reload '/'. &darr;
+
+  %section
+    %h2 "erb" Is HTML With A Shot Of Ruby
+    :markdown
+      You're now telling Sinatra to render the "erb" template called "index"
+      when people visit "/". It will look in the "views" folder for an
+      "index.erb" file. But there isn't one!
+
+      Create it. Do this:
+
+          $ git mv public/index.html views/index.erb
+
+      <small>That [mv]ed the index.html from the public folder into the
+      views folder, and renamed it so that it's `.erb` instead of `.html`,  all
+      in a way git can understand.</small>
+
+      Now reload your page. **Boom**. It's your index page, without the ugly
+      "/index.html" in the URL.
+
+        [mv]: /a-non-nerds-guide-to-the-command-line#/4
+
+%section
+  %section
+    %h2 Lay It All Out
+    :markdown
+      You probably noticed this "layout.erb" file in the views folder. Let's
+      look at it.
+
+          <%= yield %>
+
+      OK, the stuff inside the `<%= %>` is Ruby code, but this still isn't very
+      obvious. Let's play with it and see if we can figure out what's going on.
+      &darr;
+
+  %section
+    %h2 Don't Yield
+    :markdown
+      Change the `yield` to some Ruby that you've learned from tryruby.org.
+      Maybe `"Your Name".reverse`. Now refresh your page.
+
+      So&hellip; Any idea what `yield` is doing?
+
+  %section
+    %h2 Making Sinatra Work For You
+    :markdown
+      Alright, time to move stuff around. Cut and paste all of index.erb into
+      here, then cut all the `<article class='indent'>`s back into index.erb.
+      In layout.erb, put that `<%= yield %>` where the `<article
+      class='indent'>`s had been.
+
+  %section
+    %h2 FAQ Sightings
+    :markdown
+      Now clean up faq.html and sightings.html the same way. Move them into the
+      views folder and change their extension from html to erb, and get rid of
+      everything except the `<article class='indent'>`s and `<article
+      class='sighting'>`s.
+
+      Also, don't forget to add routes for them in app.rb. Something like:
+
+          get '/faq' do
+            erb :faq
+          end
+
+%section
+  %section
+    %h2 Fixing the menu
+    :markdown
+      Coming soon&hellip;
+
+%section
+  %h2 Things To Play With Before Next Week
+  :markdown
+    Next week we're going to use a database so that we can store information
+    our visitors give us. You'll need to know a lil' SQL. Go ahead and
+    [learn a wee bit o' SQL][sql].
+
+      [sql]: http://w3schools.com/sql/sql_intro.asp
