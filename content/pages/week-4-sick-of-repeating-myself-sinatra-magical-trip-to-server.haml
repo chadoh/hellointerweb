@@ -50,7 +50,16 @@ Link text: Week 4: I'm so sick of repeating myself! Sinatra takes us on a magica
   %section
     %h2 Virtual Machines
     :markdown
-      Coming soon.
+      Sometimes people call their computers _machines_. "My machine is a Dell
+      Sputnik." Just like virtual _reality_, a virtual _machine_ is a machine
+      that is entirely software. Just like a person in a virtual reality, the
+      virtual machine _thinks_ it has access to a real screen and keyboard, but
+      it doesn't.
+
+      Virtual Machines (VMs) have many uses, such as getting access to software
+      that can't run on your real machine.  For example, if you're computer is
+      running Apple's OS X, you could run a Windows VM and have access to
+      windows programs!
 
   %section
     %h2 VirtualBox
@@ -99,8 +108,7 @@ Link text: Week 4: I'm so sick of repeating myself! Sinatra takes us on a magica
       Change the stuff inside the `do...end` to a simple string, maybe "Good day,
       World!"
 
-      Now restart your server and revisit "localhost:5000/"
-      in your browser.
+      Now revisit "localhost:5000/" in your browser.
 
   %section
     %h2 The Meaning Of /
@@ -184,7 +192,54 @@ Link text: Week 4: I'm so sick of repeating myself! Sinatra takes us on a magica
   %section
     %h2 Fixing the menu
     :markdown
-      Coming soon&hellip;
+      Now that you've simplified, typing in the URLs `localhost:5000/`,
+      `localhost:5000/faq`, and `localhost:5000/sightings` into your browser
+      should work great! But the tabs are now linking to the wrong thing.
+
+      <br>
+
+      Fix it! (Make all of them links.)
+
+      <br>
+
+      <small>Hm, but that doesn't look quite right. What to do? &darr;</small>
+
+  %section
+    %h2 Do It Programmatically
+    :markdown
+      Change the link to the home page to look like this:
+
+          <% if request.path_info == '/' %>
+            <li class="menu-current">
+              Information
+            </li>
+          <% else %>
+            <li>
+              <a href='/'>Information</a>
+            </li>
+          <% end %>
+
+      <small>This uses the [request] object provided by Sinatra. Learn to weild it well!</small>
+
+        [request]: http://www.sinatrarb.com/intro.html#Accessing%20the%20Request%20Object
+
+  %section
+    %h2 Maybe You're Repeating Yourself
+    :markdown
+      That's a lot of logic that you just put around displaying the link to the
+      home page! Feel free to do the other ones the same way for now, but in
+      your free time, look into cleaning up your layout even more by using
+      [sinatra-partials] (the examples given there use [haml] instead of erb,
+      which many people prefer).
+
+      <small>You have to decide if it's worth it or not. Right now your code is
+      readable but long-winded, and the same logical pattern is repeated over
+      and over. But cleaning it up makes it harder to understand for someone
+      else. Is it worth the trade-off in this particular case? It's up to
+      you.</small>
+
+        [sinatra-partials]: https://github.com/yb66/Sinatra-Partial#collections
+        [haml]: http://haml.info/tutorial.html
 
 %section
   %h2 Things To Play With Before Next Week
