@@ -51,35 +51,97 @@ Link text: Week 4: I'm so sick of repeating myself! Sinatra takes us on a magica
     %h2 Virtual Machines
     :markdown
       Sometimes people call their computers _machines_. "My machine is a Dell
-      Sputnik." Just like virtual _reality_, a virtual _machine_ is a machine
-      that is entirely software. Just like a person in a virtual reality, the
-      virtual machine _thinks_ it has access to a real screen and keyboard, but
-      it doesn't.
+      Sputnik." Just like a virtual _reality_, a virtual _machine_ is a machine
+      that is entirely software.
 
-      Virtual Machines (VMs) have many uses, such as getting access to software
-      that can't run on your real machine.  For example, if you're computer is
-      running Apple's OS X, you could run a Windows VM and have access to
-      windows programs!
+      For example, if you use a Mac, you could set up a VM running Windows. To
+      you, it will look like just another app. It will live in its own window
+      that you can minimize. But it will be a whole Windows computer running
+      inside your Mac. You could install Windows-only apps on it, like Internet
+      Explorer.
 
   %section
     %h2 VirtualBox
     :markdown
-      Coming soon.
+      Now that you know about VMs, you're probably like "How do I get one?".
+      Well! You have a few options.
+
+      The company best known for their VM software is [VMware][vmr]. If you're
+      on a Mac, you could also buy [Parallels][pll]. Both of those cost a good
+      bit of money, though. Fortunately, [VirtualBox][vbx] is a free ([gratis &
+      libre][free]) alternative.
+
+      So VirtualBox is good, free software that let's you run VMs.
+
+        [vmr]: http://www.vmware.com/products/fusion/overview.html
+        [pll]: http://www.parallels.com/desktop7
+        [vbx]: https://www.virtualbox.org/wiki/Screenshots
+        [free]: http://www.gnu.org/philosophy/free-sw.html
+
+  %section
+    %h2 Vagrant
+    :markdown
+      [Vagrant] helps software developers set up virtual machines easily. In the
+      virtual machine, the developer can install all of the extra things that
+      you need on your computer when developing software (like a database and a
+      programming language). It's probably called Vagrant because you don't
+      need to be tied to one computer; it's really easy to download your whole
+      development environment onto another computer. That's why it's nice for a
+      class like this, because a whole bunch of setup can be done ahead of time
+      by a teacher, so the students can just focus on the fun part.
+
+        [Vagrant]: http://vagrantup.com/
 
   %section
     %h2 ssh
     :markdown
-      Coming soon.
+      If you remember the [guide to the command line][cmd], the command line is
+      also called a "shell", and the first kind of shell was abbreviated to
+      _sh_. `ssh` is short for _secure shell_, and it's a way of _securely_
+      getting _shell_ access to another computer. When you `ssh` into a
+      computer, it will look a lot like you're on your own computer in the
+      shell; but the other computer could be on the other side of the world or
+      it could be your friend's laptop. It could also be a virtual computer
+      that's running inside your computer.
+
+      Which is exactly what happens when you run `vagrant ssh`.
+
+        [cmd]: /a-non-nerds-guide-to-the-command-line#/0/2
 
   %section
     %h2 foreman
     :markdown
-      Coming soon
+      In the Week 1 skit, Browser asks Server for a document, and Server "makes
+      a copy" and sends it back. This "making a copy" part shows that the
+      server does work.  It usually assembles the whole page right when you
+      request it with fresh info tailored to you.  The program/process that
+      does all this work is called the _app server_ or _web server_.
+
+      When you develop your own website, it's essential to set up an app server
+      on your own machine so you can play with your site before publishing it.
+      `foreman` is the app server that we're using to serve a Sinatra app.
+
+      <small>Sinatra, in turn, is built with Ruby. `foreman` is a _Ruby web
+      server_.</small>
 
   %section
     %h2 localhost:5000
     :markdown
-      Coming soon.
+      A server is also called a "host". We could have changed Server's name to
+      "Host" in that skit. Now that you've set up `foreman` on your machine,
+      your machine is acting as a host! It's a _local_ host, a host that is
+      local to your machine.
+
+      The "5000" means that you're connecting to _port 5000_ on localhost.
+      Ports are just a computer's way of keeping track of all of the
+      network-connected processes that are currently running. If you leave out
+      the port, the default port number is _80_.
+
+      <small>So yes, when you visit "[duckduckgo.com][d]", you could just as well
+      type in "[duckduckgo.com:80][d80]". Try it!</small>
+
+        [d]:   https://duckduckgo.com/
+        [d80]:   https://duckduckgo.com:80/
 
 %section
   %h2 Deploy With Heroku
