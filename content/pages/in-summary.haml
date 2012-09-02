@@ -2,8 +2,105 @@ Layout: slides
 Link text: In Summary: In which we enjoy the view from the vista we've climbed to, and get our bearings so we can explore on our own
 
 %section
-  %section
-    %h1 In Summary
-    %h3
-      In which we enjoy the view from the vista we've climbed to, and get our
-      bearings so we can explore on our own
+  %h1 In Summary
+  %h3
+    In which we enjoy the view from the vista we've climbed to, and get our
+    bearings so we can explore on our own
+
+%section
+  %h2 "Back in <strong>my</strong> day": The Command Line
+  :markdown
+    To be really good at computers, you need to be able to tap into the pure,
+    unbridled, potentially destructive force known as _the shell_.
+
+    It's weird and old-school and seems irrelevant at first, but it's not.
+
+    [Learn to use it well][cmd].
+
+      [cmd]: /a-non-nerds-guide-to-the-command-line
+
+%section
+  %h2 Web Design: HTML &amp; CSS
+  :markdown
+    _Designers_ deal primarily in the realms of [HTML] and [CSS]. HTML is how you
+    make content accessible, and CSS is how you make it pretty. Each of them
+    is a world unto itself, each currently growing and adding new features by
+    the bucket load (as part of [HTML5] and [CSS3]).
+
+    You need to be comfortable with both of these to be comfortable with web
+    development. If you want to be a designer, learn them very well, and then
+    go learn Photoshop (or a cheaper competitor). Then look up a tutorial on
+    how to turn a Photoshop document into HTML & CSS.
+
+%section
+  %h2 Version Control: Git
+  :markdown
+    To make great things, you need to be able to take great risks. To keep
+    from crying when your risks don't work out, you need to be able to go
+    back in time to when things worked.
+
+    Real life would be better if you could do that. At least you can do it
+    when writing (when writing code or anything else).
+
+    [Learn git][git] and make changes fearlessly.
+
+      [git]: http://www.codeschool.com/courses/try-git
+
+%section
+  %h2 Front End: JavaScript &amp; jQuery
+  :markdown
+    When your browser downloads HTML & CSS, it can also download JavaScript.
+    JavaScript is different from HTML and CSS because it's a whole
+    programming language (technical note: it's a scripting language, which is
+    an awful lot like a full-blown programming language).
+
+    [JavaScript] is how web pages do fun things like hide and show content,
+    make things slide around, send & receive info from the server without
+    page reloads, and almost every other cool thing a web page does.
+
+    [jQuery] is a JavaScript library that makes doing a lot of common
+    JavaScript things a lot easier.
+
+%section
+  %h2 Back End: Ruby and Sinatra
+  :markdown
+    To save yourself a lot of repetitive work and to make your website save
+    users' information, you need a server and a a server-side language. Any
+    programming language you've heard of can be used: Ruby, Java, Python, C#,
+    PHP, even JavaScript.
+
+    In this class we [learned to use Ruby][ruby], because it's a fun and
+    approachable language that's also very powerful. The little web framework
+    we used is called [Sinatra]. These are great ways to learn about
+    server-side web development. Click the links and play along!
+
+%section
+  %h2 Deploying to the Web: Heroku
+  :markdown
+    Once you've got your Ruby app versioned with git, the easiest way to
+    deploy it to the web is with [Heroku]. Heroku is a fantastic choice for
+    your first deploy, and is an easy and powerful way to scale your app to
+    millions of users (when your app gets really popular). Scaling it up to
+    handle millions of users can get expensive, but you also don't have to
+    worry about setting up servers. It's a trade-off, and a deliberation you
+    wish you had (because millions of users each bringing in a few bucks each
+    makes you a successful business owner!). But for now, while you're
+    getting started, Heroku's free plan will treat you very nicely.
+
+%section
+  %h2 Sharing Your Setup: Vagrant
+  :markdown
+    If you go through a [Sinatra tutorial], you'll see that there's a lot of
+    set-up you have to do on your computer. If you want someone to work with
+    you, they have to do all the same setup.
+
+    Unless you use [Vagrant]. Vagrant makes it easy to share a whole
+    development setup.
+
+    One more thing: Vagrant makes it easy to only run what you care about. That
+    is, without Vagrant it's easy for your computer to end up with several
+    databases and languages running all the time, but when each
+    project gets its own Vagrant [VM], this problem goes away.
+
+      [Vagrant]: http://vagrantup.com/
+      [VM]: /week-4-sick-of-repeating-myself-sinatra-magical-trip-to-server#/2/1
