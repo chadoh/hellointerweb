@@ -17,3 +17,6 @@ tmp
 _yardoc
 doc/
 .sass-cache/
+
+.vagrant
+.DS_Store
